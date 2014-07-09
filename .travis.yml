@@ -4,3 +4,10 @@ node_js:
 before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
+deploy:
+  provider: s3
+  access_key_id: "AKIAJFRWTT77P6RNBYVA"
+  secret_access_key: "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"
+  bucket: "www.mikenewlin.net"  
+  local-dir: dist
+
