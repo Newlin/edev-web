@@ -9,5 +9,6 @@ deploy:
   access_key_id: "AKIAJFRWTT77P6RNBYVA"
   secret_access_key: "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"
   bucket: "www.mikenewlin.net"  
+  skip_cleanup: true
   local-dir: $TRAVIS_BUILD_DIR/dist
 
