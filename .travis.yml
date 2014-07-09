@@ -12,5 +12,5 @@ deploy:
   skip_cleanup: true
   local-dir: $TRAVIS_BUILD_DIR/dist
   endpoint: "www.mikenewlin.net.s3-website-us-west-2.amazonaws.com"
-  region: "US West (Oregon) Region"
+  region: "s3-website-us-west-2"
 
