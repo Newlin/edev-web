@@ -1,1 +1,1 @@
-https://travis-ci.org/Newlin/edev-web.svg?branch=master
+![Build Status](https://travis-ci.org/Newlin/edev-web.svg?branch=master)
