@@ -40,7 +40,7 @@ module.exports = function (grunt) {
       hello_grunt: {
         options: {
           message: "Build Complete", // A message to send
-          from: "Grunt", // Name for the sender
+          //from: "Grunt", // Name for the sender
           color: "purple", // Color of the message
           message_format: "text" // Can either be 'text' or 'html' format
         }
