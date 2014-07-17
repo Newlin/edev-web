@@ -26,7 +26,26 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+    hipchat_notifier: {
 
+    // You probably want to set your Hipchat options globally...
+
+      options: {
+        authToken: "d4e111c3aac8c2593fba3190df7dc4", // Create an authToken at https://hipchat.com/admin/api
+        roomId: "677475" // Numeric Hipchat roomId or room name
+      },
+
+    // Now create as many messages as you like!
+
+      hello_grunt: {
+        options: {
+          message: "Build Complete", // A message to send
+          from: "Grunt", // Name for the sender
+          color: "purple", // Color of the message
+          message_format: "text" // Can either be 'text' or 'html' format
+        }
+      }  
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -401,7 +420,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'hipchat_notifier'
   ]);
 
   grunt.registerTask('default', [
