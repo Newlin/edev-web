@@ -14,4 +14,11 @@ deploy:
   local-dir: $TRAVIS_BUILD_DIR/dist
   endpoint: "www.mikenewlin.net.s3-website-us-west-2.amazonaws.com"
   region: "us-west-2"
-
+notifications:
+  hipchat:
+    rooms:
+      - d4e111c3aac8c2593fba3190df7dc4@677475
+    template:
+      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'  
+    on_success: always
+    on_failure: always
