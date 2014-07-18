@@ -8,7 +8,7 @@ before_script:
 deploy:
   provider: s3
   access_key_id: "AKIAJFRWTT77P6RNBYVA"
-  secret_access_key: "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"
+  secure: "jFfryR/DYIKmuXMFH0haXrmIBWGTdcyj5ZFkq/VE3nsD3HXV/EaHS1EDTbe7Tw2knty4l0ir+/FKRBjeviDWSYJ4khYDssacv8A8MTq/ySwEoFh0aMO5NvoZn+XuzRsC+Ito2N5yC8o/5Jz2U+kzk7rC/zNHyULJtMuKL1yk3P0="
   bucket: "www.mikenewlin.net"  
   skip_cleanup: true
   local-dir: $TRAVIS_BUILD_DIR/dist
