@@ -20,6 +20,7 @@ notifications:
     rooms:
     - secure: EfFDA4SnLoAeS/1INq+vjeG4oaZ0kwa/OMqJ4z63LdmB3rqbW8JRPRnciiPfijjxXAF6l7TLd8UbPIME45jNa4GSA3cH8QgXc4U9YTE4Wrl3uirfjjtUH+EB7HTmraaA4SAJrvmwP7ii3i4wc0gnnsIRGCUwu6rc/tOwFGXv17c=
     template:
-    - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+    - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    format: html
     on_success: always
     on_failure: always
