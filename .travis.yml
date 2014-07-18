@@ -1,24 +1,25 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
-  - 'grunt build'
+- npm install -g bower grunt-cli
+- bower install
+- grunt build
 deploy:
   provider: s3
-  access_key_id: "AKIAJFRWTT77P6RNBYVA"
-  secure: "jFfryR/DYIKmuXMFH0haXrmIBWGTdcyj5ZFkq/VE3nsD3HXV/EaHS1EDTbe7Tw2knty4l0ir+/FKRBjeviDWSYJ4khYDssacv8A8MTq/ySwEoFh0aMO5NvoZn+XuzRsC+Ito2N5yC8o/5Jz2U+kzk7rC/zNHyULJtMuKL1yk3P0="
-  bucket: "www.mikenewlin.net"  
+  access_key_id: AKIAJFRWTT77P6RNBYVA
+  secret_access_key:
+    secure: mwWY//32YnJYr2bC5wPFqzkcGa7vjvqy2mxQ2o0HEwplhQ86Ls03bUmnxV62W+hEk2tNWVS6T6ZsQ+WXriLJ/4oaFhdDp8UdGmeUBSTmCQ6IAmzrSd+rE8g72gq8/VTBgQzZwTVQM4V8GwJfPINwnblNgT9etKWfzHaXq7zDGng=
+  bucket: www.mikenewlin.net
   skip_cleanup: true
-  local-dir: $TRAVIS_BUILD_DIR/dist
-  endpoint: "www.mikenewlin.net.s3-website-us-west-2.amazonaws.com"
-  region: "us-west-2"
+  local-dir: "$TRAVIS_BUILD_DIR/dist"
+  endpoint: www.mikenewlin.net.s3-website-us-west-2.amazonaws.com
+  region: us-west-2
 notifications:
   hipchat:
     rooms:
-      - secure: "EfFDA4SnLoAeS/1INq+vjeG4oaZ0kwa/OMqJ4z63LdmB3rqbW8JRPRnciiPfijjxXAF6l7TLd8UbPIME45jNa4GSA3cH8QgXc4U9YTE4Wrl3uirfjjtUH+EB7HTmraaA4SAJrvmwP7ii3i4wc0gnnsIRGCUwu6rc/tOwFGXv17c="
+    - secure: EfFDA4SnLoAeS/1INq+vjeG4oaZ0kwa/OMqJ4z63LdmB3rqbW8JRPRnciiPfijjxXAF6l7TLd8UbPIME45jNa4GSA3cH8QgXc4U9YTE4Wrl3uirfjjtUH+EB7HTmraaA4SAJrvmwP7ii3i4wc0gnnsIRGCUwu6rc/tOwFGXv17c=
     template:
-      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'  
+    - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
     on_success: always
     on_failure: always
